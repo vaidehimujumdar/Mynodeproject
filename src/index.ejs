@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <!-- Font Awesome for social media icons -->
+        <script src="https://kit.fontawesome.com/3537fe7bc0.js" crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samaysave Solutions</title>
+    <style>
+        body {
+            background-color: #e0b924;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff; /* Light background for contrast */
+            border-bottom: 2px solid #ddd;
+        }
+        .logo img {
+            height: 50px; /* Adjust as needed */
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .main-content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .main-content p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/logo.png" alt="image" style="height: 100px"> <!-- Replace with actual path -->
+        </div>
+        <!-- Navigation Bar -->
+<!-- Navigation Bar -->
+<nav style="background-color: black; padding: 10px 20px;">
+    <ul style="list-style-type: none; display: flex; justify-content: center; margin: 0; padding: 0;">
+        <li style="margin-right: 20px;">
+            <a href="/" style="color: #e0b924; text-decoration: none; font-size: 1.2rem;">Home</a>
+        </li>
+        <li style="margin-right: 20px;">
+            <a href="/about" style="color: #e0b924; text-decoration: none; font-size: 1.2rem;">About Us</a>
+        </li>
+        <li>
+            <a href="/contact" style="color: #e0b924; text-decoration: none; font-size: 1.2rem;">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+    </header>
+    
+    <div class="main-content" style="display: flex; align-items: flex-start; padding: 0 20px; width: 100%;position:relative">
+        <!-- Title and Image Side by Side -->
+        <div style="display: flex; align-items: center; flex-grow:1;margin-top: -100 px;margin-left: -20px;">
+            <!-- Title Text -->
+            <h1 style="margin: -150px;margin-top: -400px; padding-right: -250px;margin-left:-20px;flex-grow: 0.5;">Samaysave Solutions</h1>
+            <!-- Image -->
+            <img src="/images/right_image.jpg" alt="Right-side Image" style="width: 700px; height: auto;margin-left: 250px;margin-top: 20px;">
+        </div>
+    </div>
+    
+    <!-- Description Below Title and Image -->
+    <div style="padding-left: 50px; max-width: 500px;margin-top: -330px;">
+        <p>
+            We specialize in helping businesses thrive with custom software solutions. Our client's unique needs, time, and budget constraints drive us to develop secure, stable, scalable, and highly functional digital products. We aim to deliver maximum value, ensuring long-term sustainability of our clients' businesses.
+        </p>
+    </div>
+
+    <!-- Our Services Section -->
+<!-- Our Services Section -->
+<section id="services" style="margin-top: 250px; padding: 20px;">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px;">Our Services</h2>
+
+    <div style="display: flex; justify-content: space-around; gap: 20px;">
+        <% services.forEach(function(service) { %>
+            <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer; width: 30%;">
+                <h3><%= service.name %></h3>
+                <p><%= service.short_desc %></p>
+            </div>
+            <% }) %>
+    </div>
+
+
+    <!-- Flexbox layout to arrange the boxes horizontally -->
+    <div style="display: flex; justify-content: space-around; gap: 20px;">
+        <!-- Service Box 1: Event Management -->
+        <a href="/homepage/event-management" style="text-decoration: none; width: 30%;">
+            <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer;">
+                <h3>Event Management</h3>
+                <p>We help you manage and execute memorable events with precision.</p>
+            </div>
+        </a>
+
+        <!-- Service Box 2: Profile Editor -->
+        <a href="/homepage/profile-editor" style="text-decoration: none; width: 30%;">
+            <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer;">
+                <h3>Profile Editor</h3>
+                <p>Easy-to-use profile editing tools for seamless management.</p>
+            </div>
+        </a>
+
+        <!-- Service Box 3: Business Management -->
+        <a href="/business-management" style="text-decoration: none; width: 30%;">
+            <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer;">
+                <h3>Business Management</h3>
+                <p>Streamlined solutions to manage and grow your business efficiently.</p>
+            </div>
+        </a>
+    </div>
+
+    
+</section>
+
+<!-- Footer Section -->
+<footer style="background-color: black; color: #e0b924; padding: 20px 0; text-align: center;">
+    <p style="margin-bottom: 20px;">Follow Us On</p>
+    <div style="display: flex; justify-content: center; gap: 30px;">
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/company/samaysave-solutions/" target="_blank" style="color: #e0b924; text-decoration: none; font-size: 2rem;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com" target="_blank" style="color: #e0b924; text-decoration: none; font-size: 2rem;">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- Twitter Icon -->
+        <a href="https://www.twitter.com" target="_blank" style="color: #e0b924; text-decoration: none; font-size: 2rem;">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+    <p style="margin-top: 20px;">&copy; 2024 Samaysave Solutions. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
