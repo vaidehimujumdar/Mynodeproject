@@ -2,6 +2,17 @@ const express = require('express');
 const router = express.Router();
 const sqlite3 = require('sqlite3').verbose(); // Import the sqlite3 package
 
+// Route for home page (index.ejs)
+router.get('/', (req, res) => {
+  // Query the database
+  db.all('SELECT * FROM service_table', (err, rows) => {
+      if (err) {
+          return res.status(500).send('Error retrieving data from database');
+      }
+      // Render index.ejs and pass the data (rows)
+      res.render('index', { services: rows });
+  });
+});
 // Initialize the database connection
 const db = new sqlite3.Database('./newdata.db', (err) => {
   if (err) {

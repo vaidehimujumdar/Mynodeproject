@@ -21,6 +21,7 @@
             padding: 10px 20px;
             background-color: #fff; /* Light background for contrast */
             border-bottom: 2px solid #ddd;
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
         }
         .logo img {
             height: 50px; /* Adjust as needed */
@@ -44,6 +45,11 @@
         .main-content h1 {
             font-size: 3em;
             margin: 0;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+        /* Hover effect on the title */
+        .main-content h1:hover {
+            transform: translate(30px,-20px); /* Move title slightly to the left on hover */
         }
         .main-content p {
             font-size: 1.2em;
@@ -91,54 +97,23 @@
             We specialize in helping businesses thrive with custom software solutions. Our client's unique needs, time, and budget constraints drive us to develop secure, stable, scalable, and highly functional digital products. We aim to deliver maximum value, ensuring long-term sustainability of our clients' businesses.
         </p>
     </div>
-
     <!-- Our Services Section -->
-<!-- Our Services Section -->
-<section id="services" style="margin-top: 250px; padding: 20px;">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px;">Our Services</h2>
-
-    <div style="display: flex; justify-content: space-around; gap: 20px;">
-        <% services.forEach(function(service) { %>
-            <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer; width: 30%;">
-                <h3><%= service.name %></h3>
-                <p><%= service.short_desc %></p>
-            </div>
-            <% }) %>
-    </div>
-
-
-    <!-- Flexbox layout to arrange the boxes horizontally -->
-    <div style="display: flex; justify-content: space-around; gap: 20px;">
-        <!-- Service Box 1: Event Management -->
-        <a href="/homepage/event-management" style="text-decoration: none; width: 30%;">
-            <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer;">
-                <h3>Event Management</h3>
-                <p>We help you manage and execute memorable events with precision.</p>
-            </div>
-        </a>
-
-        <!-- Service Box 2: Profile Editor -->
-        <a href="/homepage/profile-editor" style="text-decoration: none; width: 30%;">
-            <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer;">
-                <h3>Profile Editor</h3>
-                <p>Easy-to-use profile editing tools for seamless management.</p>
-            </div>
-        </a>
-
-        <!-- Service Box 3: Business Management -->
-        <a href="/business-management" style="text-decoration: none; width: 30%;">
-            <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer;">
-                <h3>Business Management</h3>
-                <p>Streamlined solutions to manage and grow your business efficiently.</p>
-            </div>
-        </a>
-    </div>
-
+    <section id="services" style="margin-top: 250px; padding: 20px;">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px;">Our Services</h2>
     
-</section>
+        <!-- Display services from the database -->
+        <div style="display: flex; justify-content: space-around; gap: 20px;">
+            <% services.forEach(function(service_table) { %>
+                <div style="background-color: black; color: #e0b924; padding: 20px; text-align: center; border-radius: 10px; cursor: pointer; width: 30%;">
+                    <h3><%= service_table.name %></h3>
+                    <p><%= service_table.short_desc%></p>
+                </div>
+            <% }) %>
+        </div>
+    </section>
 
 <!-- Footer Section -->
-<footer style="background-color: black; color: #e0b924; padding: 20px 0; text-align: center;">
+<footer style="background-color: black; color: #e0b924; padding: 20px 0; text-align: center;margin-top: 100px;">
     <p style="margin-bottom: 20px;">Follow Us On</p>
     <div style="display: flex; justify-content: center; gap: 30px;">
         <!-- LinkedIn Icon -->

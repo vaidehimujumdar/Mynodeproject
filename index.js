@@ -2,7 +2,7 @@ const express = require('express');
 const homepageroutes = require('./src/route');
 const app = express();
 const path = require('path');
-const sqlite3 = require('sqlite3').verbose(); // Import the sqlite3 package
+const sqlite3 = require('sqlite3').verbose();
 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
