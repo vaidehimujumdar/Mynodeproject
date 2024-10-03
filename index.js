@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     // Fetch the data from the 'services' table in SQLite
     db.all('SELECT * FROM service_table', (err, rows) => {
         if (err) {
-            return res.status(500).send('Error retrieving data from the database');
+            return res.status(500).send('Error retrieving data from the database'+err.stack);
         }
         
 console.log('Retrieved rows:', rows);
