@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <!-- Link to Google Fonts or other custom font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1f1f1f; /* Dark background for contrast */
+            color: #f4f4f9; /* Light text for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: #ff4500; /* A vibrant orange for heading contrast */
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .step:nth-child(odd) {
+            flex-direction: row-reverse; /* Reverse for odd steps */
+        }
+
+        .step img {
+            width: 150px;
+            height: auto;
+            margin: 0 20px;
+            border-radius: 10px;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step h2 {
+            font-size: 1.8rem;
+            color: #ffb400; /* Bright orange for subheadings */
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step img {
+                margin-bottom: 20px;
+                width: 80%;
+            }
+
+            .step:nth-child(odd) {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Event Management Services</h1>
+
+        <div class="steps-container">
+            <!-- Step 1: Planning and Strategy -->
+            <div class="step">
+                <img src="public/images/eventmgmt.png" alt="Planning and Strategy Image">
+                <div class="step-content">
+                    <h2>Step 1: Planning and Strategy</h2>
+                    <p>Our experienced team ensures every event starts with thorough planning. We create a blueprint tailored to your objectives, ensuring flawless execution down the road.</p>
+                </div>
+            </div>
+
+            <!-- Step 2: Design and Creative Execution -->
+            <div class="step">
+                <img src="https://example.com/design-image.jpg" alt="Design and Creative Execution Image">
+                <div class="step-content">
+                    <h2>Step 2: Design and Creative Execution</h2>
+                    <p>From concept to creation, we handle the design and execution of your event, ensuring every detail reflects your vision and brand.</p>
+                </div>
+            </div>
+
+            <!-- Step 3: Event Coordination -->
+            <div class="step">
+                <img src="https://example.com/coordination-image.jpg" alt="Event Coordination Image">
+                <div class="step-content">
+                    <h2>Step 3: Event Coordination</h2>
+                    <p>On the day of the event, our team takes care of coordination, ensuring everything runs smoothly from start to finish.</p>
+                </div>
+            </div>
+
+            <!-- Step 4: Post-Event Support -->
+            <div class="step">
+                <img src="https://example.com/post-event-image.jpg" alt="Post-Event Support Image">
+                <div class="step-content">
+                    <h2>Step 4: Post-Event Support</h2>
+                    <p>After the event, we provide full post-event support, ensuring follow-up tasks are handled with the same care as the event itself.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
