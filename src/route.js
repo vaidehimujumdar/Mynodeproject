@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const sqlite3 = require('sqlite3').verbose(); // Import the sqlite3 package
+const {sendNotification} = require('./service/NotificationService');
 
 // Route for home page (index.ejs)
 router.get('/', (req, res) => {
@@ -60,8 +61,20 @@ router.get('/profile-editor', (req, res) => {
 // Define the `/homepage/update` route
 router.post('/update', (req, res) => {
   const content = req.body.content; // Assume content is sent in the request body
-
 });
+
+router.get('/send-notification', (req, res) => {
+  res.render('notification');  
+});
+
+router.post('/send-notification-to-server', (req, res) => {
+  const token = req.body.token
+  const title = req.body.title
+  const body = req.body.body
+  sendNotification(token, title, body);
+  res.send('Notification sent successfully');  
+});
+
 module.exports = router;
 
 
